@@ -1,0 +1,373 @@
+
+@media (max-width: 576px) {
+    .body {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 80px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+
+        .header {
+            grid-area: header;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $background-color-header;
+            position: fixed;
+            width: 100%;
+            height: 50px;
+        }
+        .main {
+            grid-area: main;
+            background-image: url("../assets/Fondo/Fondo\ 01.jpg");
+        }
+        .footer {
+            grid-area: footer;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $background-color-footer
+        }
+    }
+    
+    
+                                                /* MODIFICACIONES PARA EL HEADER */
+    .encabezado-logo {
+        margin-left: 10px;
+        width: 40px;
+    }
+    .encabezado-titulo {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 100px;
+        font-family: $font-family-titulopagina;
+        .titulo {
+            font-style: italic;
+            font-weight: bold; 
+            font-size: 25px;
+        }
+        .subtitulo {
+            font-style: italic;
+            font-weight: lighter; 
+            font-size: 15px; 
+        }
+    }
+    .pages {
+        display: none;
+    }
+
+    .desplegable {
+        display: flex;
+        margin-right: 8%;
+    }
+    .nav {
+        list-style: none;
+    }
+    .nav > li {         
+        float: left;
+    }
+    .nav li img:hover {       
+        background-color: $background-color-footer;
+    }
+    .nav-imagen{
+        width: 40px;
+    }
+    .nav-pages {
+        list-style: none;
+        background-color: $background-color-footer;
+    }
+    .nav-pages li a {
+        display: block;
+    }
+    .nav li ul {
+        display: none;
+        position: absolute; 
+    }
+    .nav li:hover > ul {   
+        display: block ;
+    }
+
+    
+                                                /* MODIFICACIONES PARA CUERPO DE PAGINAS */
+    #cuerpo-paginas {
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 40px;
+        background-color: $background-color-cuerpopaginas;
+        font-family: 'ABeeZee', sans-serif;
+    }
+    .cuerpo-paginas-titulo {
+        text-align: center;
+        font-size: 20px;
+        background-color: $background-color-cuerpopaginastitulo;
+    }
+    
+                                                /* CART DE PRODUCTOS */
+    .cuerpo-paginas-cart {
+        @include flex-column-center-center;
+        gap: 20px 20px;
+        .cart {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            background-color: $background-color-cart;
+            border-radius: 10px;
+            .cart-imagen {
+                margin-top: 10px;
+                width: 180px;
+                align-self: center;
+            }
+            .cart-cuerpo {
+                margin: 10px;
+                .cart-titulo {
+                    margin: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                .cart-description {
+                    display: inline-block;
+                    list-style: none;
+                    margin: auto;
+                    font-size: 12px;
+                    text-align: left;
+                }
+                .cart-precio {
+                    margin: 5px;
+                    font-size: 15px;
+                    text-align: left;
+                    font-weight: bold;
+                }
+            }
+            .cart-boton {
+                margin: 5px;
+                align-self: center;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 15px;
+                color: black;
+                width: 100px;
+                height: 20px;
+                background-color: $background-color-cartbuttom;
+                border-radius: 10px; border-style: solid; border-color: hsla(180, 100%, 94%, 0.1);
+            }
+        }
+    }
+    
+    
+    
+                                                /* FORMULARIO DE CONTACTO */
+    .formulario {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $background-color-grayprincipal;
+        border-radius: 10px;
+        .formulario-bloques {
+            width: 90%;
+            height: 30px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: hsla(0, 0%, 100%, 0.5);
+        }
+        .mensaje {
+            height: 100px;
+        }
+        .formulario-boton {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            height: 30px;
+            width: 20%;
+            text-align: center;
+            font-weight: bold;
+            border-color: hsl(0, 0%, 57%); border-style: solid; border-radius: 10px;
+            background-color: hsla(0, 0%, 83%, 0.6);
+        }
+    }
+    
+    
+                                                /* MAIN DE CARRITO */
+    .cuerpo-paginas-carrito {
+    margin: 25px;
+    text-decoration: none;
+    .seguir-comprando {
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    .carrito-productos {
+        margin-top: 25px;
+        .caja-productos{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            text-align: left;
+            margin: 10px;
+            background-color: $background-color-grayprincipal;
+            border-radius: 10px;
+            .caja-imagen {
+                padding: 5px;
+                padding-right: 15px;
+                .imagen img{
+                    width: 60px;
+                }
+            }
+            .caja-productos-textos {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .textos-tiutloproducto-precio {
+                display: flex;
+                justify-content: space-between;
+                .tiutloproducto {
+                    padding: 5px;
+                    font-size: 18px;
+                    text-decoration: underline;
+                }
+                .precio {
+                    padding: 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .textos-quitar-cantidad {
+                display: flex;
+                justify-content: space-between;
+                .quitar {
+                    padding: 5px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    border-radius: 0.6em;
+                    border: 0px;
+                    outline: 0px;
+                    text-align: center;
+                    background-color: inherit;
+                    color: hsl(0, 100%, 74%);
+                    text-decoration: underline;
+                }
+                .cantidad {
+                    padding: 5px;
+                    .cantidad h6 {
+                        font-size: 12px;
+                        font-weight: lighter;
+                    }
+                    .restar {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        border-radius: 0.6em;
+                        border: 0px;
+                        outline: 0px;
+                        text-align: center;
+                        background-color: inherit;
+                        color: hsl(0, 100%, 74%);
+                    }
+                    .sumar {
+                        padding-left: 5px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        border-radius: 0.6em;
+                        border: 0px;
+                        outline: 0px;
+                        text-align: center;
+                        background-color: inherit;
+                        color: hsl(0, 100%, 74%);
+                    }
+                }
+            }
+        }
+    }
+    .linea {
+        margin-left: 10px;
+        margin-right: 10px;
+        border: none;
+        height: 3px;
+        flex-shrink: 0;
+        background-color: $background-color-grayprincipal;
+        list-style: none;
+    }
+    .subtotal-caja {
+        list-style: none;
+        margin: 0 10px 10px 10px;
+        .subtotal-caja-elemntos {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 18px;
+            font-weight: bold;
+            .subtotal {
+                padding: 5px;
+                padding-right: 10%;
+            }
+            .numero {
+                padding: 5px;
+            }
+        }
+    }
+    .boton-comprar {
+        padding-bottom: 25px;
+        list-style: none;
+        text-align: center;
+        .boton {
+            padding: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            outline: 0px;
+            text-align: center;
+            background-color: $background-color-grayprincipal;
+            border-radius: 5px;
+        }
+    }
+}
+    
+    
+    
+                                                /* MODIFICACIONES PARA EL FOOTER */
+    .footer-logo-imagen {
+        width: 60px;
+    }
+    .footer-logo-texto {
+        display: none;
+    }  
+    .footer-horarios {
+        display: none;
+    }
+    
+    .footer-social{
+        width: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+        align-content: center;
+        margin-right: 10px;
+    }
+    .footer-social-red{
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .footer-social-red img {
+        width: 20px;
+    }
+    .footer-social-red label {
+        display: none;
+    }
+}

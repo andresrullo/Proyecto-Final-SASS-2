@@ -1,0 +1,137 @@
+                                            /* FORMULARIO DE CARRITO */
+.cuerpo-paginas-carrito {
+    margin: 25px;
+    text-decoration: none;
+    .seguir-comprando {
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    .carrito-productos {
+        margin-top: 25px;
+        .caja-productos{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            text-align: left;
+            margin: 10px;
+            background-color: $background-color-grayprincipal;
+            border-radius: 10px;
+            .caja-imagen {
+                padding: 5px;
+                padding-right: 15px;
+                .imagen img{
+                    width: 60px;
+                }
+            }
+            .caja-productos-textos {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .textos-tiutloproducto-precio {
+                display: flex;
+                justify-content: space-between;
+                .tiutloproducto {
+                    padding: 5px;
+                    font-size: 18px;
+                    text-decoration: underline;
+                }
+                .precio {
+                    padding: 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .textos-quitar-cantidad {
+                display: flex;
+                justify-content: space-between;
+                .quitar {
+                    padding: 5px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    border-radius: 0.6em;
+                    border: 0px;
+                    outline: 0px;
+                    text-align: center;
+                    background-color: inherit;
+                    color: hsl(0, 100%, 74%);
+                    text-decoration: underline;
+                }
+                .cantidad {
+                    padding: 5px;
+                    .cantidad h6 {
+                        font-size: 12px;
+                        font-weight: lighter;
+                    }
+                    .restar {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        border-radius: 0.6em;
+                        border: 0px;
+                        outline: 0px;
+                        text-align: center;
+                        background-color: inherit;
+                        color: hsl(0, 100%, 74%);
+                    }
+                    .sumar {
+                        padding-left: 5px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        border-radius: 0.6em;
+                        border: 0px;
+                        outline: 0px;
+                        text-align: center;
+                        background-color: inherit;
+                        color: hsl(0, 100%, 74%);
+                    }
+                }
+            }
+        }
+    }
+    .linea {
+        margin-left: 10px;
+        margin-right: 10px;
+        border: none;
+        height: 3px;
+        flex-shrink: 0;
+        background-color: $background-color-grayprincipal;
+        list-style: none;
+    }
+    .subtotal-caja {
+        list-style: none;
+        margin: 0 10px 10px 10px;
+        .subtotal-caja-elemntos {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 18px;
+            font-weight: bold;
+            .subtotal {
+                padding: 5px;
+                padding-right: 10%;
+            }
+            .numero {
+                padding: 5px;
+            }
+        }
+    }
+    .boton-comprar {
+        padding-bottom: 25px;
+        list-style: none;
+        text-align: center;
+        .boton {
+            padding: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            outline: 0px;
+            text-align: center;
+            background-color: $background-color-grayprincipal;
+            border-radius: 5px;
+        }
+    }
+}

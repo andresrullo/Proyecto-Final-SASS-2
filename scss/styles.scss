@@ -1,0 +1,17 @@
+@import "./base/reset";
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+
+@import "./layout/general";
+@import "./layout/header";
+
+@import "./layout/main-carts";
+@import "./layout/main-carrito";
+@import "./layout/main-contacto";
+
+@import "./layout/footer";
+
+
+@import "./layout/media-tablet";
+@import "./layout/media-mobile";

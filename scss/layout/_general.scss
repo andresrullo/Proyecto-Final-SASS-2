@@ -1,0 +1,50 @@
+.body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 80px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $background-color-header;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+    }
+    .main {
+        grid-area: main;
+        background-image: url("../assets/Fondo/Fondo\ 01.jpg");
+    }
+    .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $background-color-footer;
+    }
+}
+
+
+                                            /* MODIFICACIONES PARA CUERPO DE PAGINAS */
+#cuerpo-paginas {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    background-color: $background-color-cuerpopaginas;
+    font-family: 'ABeeZee', sans-serif;
+}
+.cuerpo-paginas-titulo {
+    text-align: center;
+    font-size: 20px;
+    background-color: $background-color-cuerpopaginastitulo;
+}

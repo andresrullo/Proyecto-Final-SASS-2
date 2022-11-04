@@ -1,0 +1,65 @@
+.footer-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-left: 10px;
+    .footer-logo-imagen {
+        width: 40px;
+    }
+    .footer-logo-texto {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 120px;
+        font-family: $font-family-titulopagina;
+        .logo-titulo {
+            font-style: italic;
+            font-weight: bold;
+        }
+        .logo-subtitulo {
+            font-style: italic;
+            font-weight: lighter; 
+        }
+    }
+}
+
+.footer-horarios-lista {
+    list-style: none;
+    text-align: center;
+    width: 200px;
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: 'ABeeZee', sans-serif;
+    .lista-titulo {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
+.footer-social{
+    @include props-flex-content (row, space-around, center);
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;*/
+    font-size: 12px;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: lighter;
+}
+.footer-social-red{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.footer-social-red img {
+    width: 13px;
+}
+.footer-social-red label {
+    margin: 10px;
+}
+.footer-social-red a {
+    text-decoration: none;
+    color: black;
+}

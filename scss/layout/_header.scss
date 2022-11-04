@@ -1,0 +1,36 @@
+.encabezado-logo {
+    margin-left: 10px;
+    width: 40px;
+}
+.encabezado-titulo {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    width: 120px;
+    font-family: $font-family-titulopagina;
+    .titulo {
+        font-style: italic;
+        font-weight: bold; 
+        font-size: 25px;
+    }
+    .subtitulo {
+        font-style: italic;
+        font-weight: lighter; 
+        font-size: 15px; 
+    }
+}
+
+.pages {
+    margin-right: 10px;
+    .pages-titulo {
+        text-decoration: none;
+        color: black;
+        margin: 5px;
+        font-style: italic;
+        font-family: 'Abel', sans-serif;
+    }
+}
+
+.desplegable {
+    display: none;
+}

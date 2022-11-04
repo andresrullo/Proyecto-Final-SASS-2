@@ -1,0 +1,34 @@
+                                            /* FORMULARIO DE CONTACTO */
+.formulario {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 25px;
+    @include props-flex-content-items (column, center, center);
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    flex-wrap: wrap;
+    background-color: $background-color-grayprincipal;
+    border-radius: 10px;
+    .formulario-bloques {
+        width: 90%;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: hsla(0, 0%, 100%, 0.5);
+    }
+    .mensaje {
+        height: 200px;
+    }
+    .formulario-boton {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 30px;
+        width: 20%;
+        text-align: center;
+        font-weight: bold;
+        border-color: hsl(0, 0%, 57%); border-style: solid; border-radius: 10px;
+        background-color: hsla(0, 0%, 83%, 0.6);
+    }
+}
