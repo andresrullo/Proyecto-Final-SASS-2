@@ -24,6 +24,8 @@
                 padding-right: 15px;
                 .imagen img{
                     width: 60px;
+                    background-color: hsla(0, 0%, 100%, 0.2);
+                    border-radius: 5px;
                 }
             }
             .caja-productos-textos {
@@ -130,7 +132,9 @@
             font-size: 15px;
             outline: 0px;
             text-align: center;
+            font-weight: lighter;
             background-color: $background-color-grayprincipal;
+            border-color: hsl(0, 0%, 57%); border-style: solid; border-radius: 10px;
             border-radius: 5px;
         }
     }

@@ -42,8 +42,10 @@
     margin-bottom: 40px;
     background-color: $background-color-cuerpopaginas;
     font-family: 'ABeeZee', sans-serif;
+    border-radius: 10px;
 }
 .cuerpo-paginas-titulo {
+    padding: 5px;
     text-align: center;
     font-size: 20px;
     background-color: $background-color-cuerpopaginastitulo;

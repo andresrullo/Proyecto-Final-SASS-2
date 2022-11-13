@@ -13,10 +13,17 @@
         margin-bottom: 25px;
         background-color: $background-color-grayprincipal;
         border-radius: 10px;
-        .cart-imagen {
+        .cart-imagen-container {
             margin-top: 10px;
             width: 180px;
+            height: 180px;
             align-self: center;
+            background-color: hsla(0, 0%, 100%, 0.2);
+            border-radius: 5px;
+            .cart-imagen {
+                width: 100%;
+                border-radius: 5px;
+            }
         }
         .cart-cuerpo {
             margin: 10px;
@@ -41,17 +48,18 @@
             }
         }
         .cart-boton {
-            margin: 5px;
+            margin: 10px;
+            padding: 2px;
             align-self: center;
             text-align: center;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: lighter;
             font-size: 15px;
             color: black;
             width: 100px;
             height: 20px;
             background-color: hsla(180, 100%, 94%, 0.3);
-            border-radius: 10px; border-style: solid; border-color: hsla(180, 100%, 94%, 0.1);
+            border-radius: 10px; border-style: none;
         }
     }
 }

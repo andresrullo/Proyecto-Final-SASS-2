@@ -65,6 +65,7 @@
     .desplegable {
         display: flex;
         margin-right: 8%;
+        font-family: 'Abel', sans-serif;
     }
     .nav {
         list-style: none;
@@ -73,21 +74,23 @@
         float: left;
     }
     .nav li img:hover {       
-        background-color: $background-color-footer;
+        background-color: hsla(0, 0%, 83%, 70%);
     }
     .nav-imagen{
         width: 40px;
     }
     .nav-pages {
         list-style: none;
-        background-color: $background-color-footer;
+        background-color: hsla(0, 0%, 83%, 70%);
     }
     .nav-pages li a {
         display: block;
+        text-decoration: none;
+        color: black;
     }
     .nav li ul {
         display: none;
-        position: absolute; 
+        position: absolute;   
     }
     .nav li:hover > ul {   
         display: block ;
@@ -102,6 +105,7 @@
         margin-bottom: 40px;
         background-color: $background-color-cuerpopaginas;
         font-family: 'ABeeZee', sans-serif;
+        border-radius: 10px;
     }
     .cuerpo-paginas-titulo {
         text-align: center;
@@ -112,7 +116,7 @@
                                                 /* CART DE PRODUCTOS */
     .cuerpo-paginas-cart {
         @include flex-column-center-center;
-        gap: 20px 20px;
+        gap: 5px 5px;
         .cart {
             width: 200px;
             display: flex;
@@ -121,10 +125,17 @@
             margin-bottom: 25px;
             background-color: $background-color-cart;
             border-radius: 10px;
-            .cart-imagen {
+            .cart-imagen-container {
                 margin-top: 10px;
                 width: 180px;
+                height: 180px;
                 align-self: center;
+                background-color: hsla(0, 0%, 100%, 0.2);
+                border-radius: 5px;
+                .cart-imagen {
+                    width: 100%;
+                    border-radius: 5px;
+                }
             }
             .cart-cuerpo {
                 margin: 10px;
@@ -149,7 +160,8 @@
                 }
             }
             .cart-boton {
-                margin: 5px;
+                margin: 10px;
+                padding: 5px;
                 align-self: center;
                 text-align: center;
                 text-decoration: none;
@@ -159,7 +171,7 @@
                 width: 100px;
                 height: 20px;
                 background-color: $background-color-cartbuttom;
-                border-radius: 10px; border-style: solid; border-color: hsla(180, 100%, 94%, 0.1);
+                border-radius: 10px; border-style: none;
             }
         }
     }
@@ -167,39 +179,56 @@
     
     
                                                 /* FORMULARIO DE CONTACTO */
+
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .formulario {
-        max-width: 400px;
-        margin: 0 auto;
-        margin-top: 25px;
-        display: flex;
+        width: 80%;
+        @include props-flex-content-items (column, center, center);
+        /*display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center;*/
         flex-wrap: wrap;
         background-color: $background-color-grayprincipal;
         border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .formulario-texto {
+            font-size: 12px;
+            align-self: flex-start;
+            margin-top: 10px;
+            margin-left: 25px;
+            font-style: italic;
+            font-weight: lighter;
+        }
         .formulario-bloques {
             width: 90%;
-            height: 30px;
+            height: 25px;
             margin: 5px;
             border-radius: 5px;
-            background-color: hsla(0, 0%, 100%, 0.5);
+            background-color: hsla(0, 0%, 100%, 0.2);
+            border: 0px;
+            outline: 0px;
         }
         .mensaje {
-            height: 100px;
+            height: 150px;
         }
         .formulario-boton {
-            margin-top: 5%;
-            margin-bottom: 5%;
+            margin-top: 10px;
+            margin-bottom: 10px;
             height: 30px;
             width: 20%;
             text-align: center;
-            font-weight: bold;
+            font-weight: lighter;
             border-color: hsl(0, 0%, 57%); border-style: solid; border-radius: 10px;
             background-color: hsla(0, 0%, 83%, 0.6);
+            cursor: pointer;
         }
     }
-    
+}
     
                                                 /* MAIN DE CARRITO */
     .cuerpo-paginas-carrito {
@@ -227,6 +256,8 @@
                 padding-right: 15px;
                 .imagen img{
                     width: 60px;
+                    background-color: hsla(0, 0%, 100%, 0.2);
+                    border-radius: 5px;
                 }
             }
             .caja-productos-textos {
@@ -366,6 +397,7 @@
     }
     .footer-social-red img {
         width: 20px;
+        cursor: pointer;
     }
     .footer-social-red label {
         display: none;
