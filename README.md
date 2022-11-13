@@ -1,3 +1,12 @@
 12 de Noviembre
-    Correcioones en el main de contacto
-    Modificaciones en footer y main general
+    Correcciones:
+        Desplegable en mobile
+
+    Modificaciones:
+        Footer 
+        Main general
+        Main contacto
+        Cart´s
+
+
+    Comprimí imágenes
