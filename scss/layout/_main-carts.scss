@@ -7,17 +7,21 @@
     gap: 20px 20px;
     .cart {
         width: 200px;
-        display: flex;
-        flex-direction: column;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 30px 40px ;
         margin-top: 25px;
         margin-bottom: 25px;
         background-color: $background-color-grayprincipal;
         border-radius: 10px;
         .cart-imagen-container {
-            margin-top: 10px;
+            margin: 10px;
+            margin-bottom: 0px;
             width: 180px;
             height: 180px;
             align-self: center;
+            justify-self: center;
             background-color: hsla(0, 0%, 100%, 0.2);
             border-radius: 5px;
             .cart-imagen {
@@ -27,39 +31,47 @@
         }
         .cart-cuerpo {
             margin: 10px;
+            margin-top: 5px;
             .cart-titulo {
                 margin: 5px;
-                font-size: 20px;
+                font-size: 15px;
                 font-weight: bold;
                 text-align: center;
+                text-decoration: underline;
             }
             .cart-description {
                 display: inline-block;
                 list-style: none;
                 margin: auto;
-                font-size: 12px;
+                font-size: 10px;
                 text-align: left;
             }
+        }
+        .container-precio {
+            margin: 10px;
             .cart-precio {
-                margin: 5px;
                 font-size: 15px;
                 text-align: left;
                 font-weight: bold;
             }
         }
-        .cart-boton {
+        .container-boton {
             margin: 10px;
-            padding: 2px;
+            margin-bottom: 20px;
             align-self: center;
-            text-align: center;
-            text-decoration: none;
-            font-weight: lighter;
-            font-size: 15px;
-            color: black;
-            width: 100px;
-            height: 20px;
-            background-color: hsla(180, 100%, 94%, 0.3);
-            border-radius: 10px; border-style: none;
+            justify-self: center;
+            .cart-boton {
+                padding: 5px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: lighter;
+                font-size: 12px;
+                color: black;
+                width: 100px;
+                height: 20px;
+                background-color: hsla(180, 100%, 94%, 0.3);
+                border-radius: 10px; border-style: none;
+            }
         }
     }
 }

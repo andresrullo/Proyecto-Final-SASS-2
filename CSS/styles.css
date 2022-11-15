@@ -91,54 +91,64 @@
   gap: 20px 20px; }
   .cuerpo-paginas-cart .cart {
     width: 200px;
-    display: flex;
-    flex-direction: column;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 30px 40px;
     margin-top: 25px;
     margin-bottom: 25px;
     background-color: rgba(212, 212, 212, 0.7);
     border-radius: 10px; }
     .cuerpo-paginas-cart .cart .cart-imagen-container {
-      margin-top: 10px;
+      margin: 10px;
+      margin-bottom: 0px;
       width: 180px;
       height: 180px;
       align-self: center;
+      justify-self: center;
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 5px; }
       .cuerpo-paginas-cart .cart .cart-imagen-container .cart-imagen {
         width: 100%;
         border-radius: 5px; }
     .cuerpo-paginas-cart .cart .cart-cuerpo {
-      margin: 10px; }
+      margin: 10px;
+      margin-top: 5px; }
       .cuerpo-paginas-cart .cart .cart-cuerpo .cart-titulo {
         margin: 5px;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
-        text-align: center; }
+        text-align: center;
+        text-decoration: underline; }
       .cuerpo-paginas-cart .cart .cart-cuerpo .cart-description {
         display: inline-block;
         list-style: none;
         margin: auto;
-        font-size: 12px;
+        font-size: 10px;
         text-align: left; }
-      .cuerpo-paginas-cart .cart .cart-cuerpo .cart-precio {
-        margin: 5px;
+    .cuerpo-paginas-cart .cart .container-precio {
+      margin: 10px; }
+      .cuerpo-paginas-cart .cart .container-precio .cart-precio {
         font-size: 15px;
         text-align: left;
         font-weight: bold; }
-    .cuerpo-paginas-cart .cart .cart-boton {
+    .cuerpo-paginas-cart .cart .container-boton {
       margin: 10px;
-      padding: 2px;
+      margin-bottom: 20px;
       align-self: center;
-      text-align: center;
-      text-decoration: none;
-      font-weight: lighter;
-      font-size: 15px;
-      color: black;
-      width: 100px;
-      height: 20px;
-      background-color: rgba(224, 255, 255, 0.3);
-      border-radius: 10px;
-      border-style: none; }
+      justify-self: center; }
+      .cuerpo-paginas-cart .cart .container-boton .cart-boton {
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: lighter;
+        font-size: 12px;
+        color: black;
+        width: 100px;
+        height: 20px;
+        background-color: rgba(224, 255, 255, 0.3);
+        border-radius: 10px;
+        border-style: none; }
 
 /* FORMULARIO DE CARRITO */
 .cuerpo-paginas-carrito {
@@ -445,60 +455,71 @@
     background-color: rgba(255, 184, 193, 0.3); }
   /* CART DE PRODUCTOS */
   .cuerpo-paginas-cart {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 10px 10px; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 20px; }
     .cuerpo-paginas-cart .cart {
       width: 200px;
-      display: flex;
-      flex-direction: column;
+      height: 400px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 30px 40px;
       margin-top: 25px;
       margin-bottom: 25px;
       background-color: rgba(212, 212, 212, 0.7);
       border-radius: 10px; }
       .cuerpo-paginas-cart .cart .cart-imagen-container {
-        margin-top: 10px;
+        margin: 10px;
+        margin-bottom: 0px;
         width: 180px;
         height: 180px;
         align-self: center;
+        justify-self: center;
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 5px; }
         .cuerpo-paginas-cart .cart .cart-imagen-container .cart-imagen {
           width: 100%;
           border-radius: 5px; }
       .cuerpo-paginas-cart .cart .cart-cuerpo {
-        margin: 10px; }
+        margin: 10px;
+        margin-top: 5px; }
         .cuerpo-paginas-cart .cart .cart-cuerpo .cart-titulo {
-          margin: 10px;
-          font-size: 20px;
+          margin: 5px;
+          font-size: 15px;
           font-weight: bold;
-          text-align: center; }
+          text-align: center;
+          text-decoration: underline; }
         .cuerpo-paginas-cart .cart .cart-cuerpo .cart-description {
           display: inline-block;
           list-style: none;
           margin: auto;
-          font-size: 12px;
+          font-size: 10px;
           text-align: left; }
-        .cuerpo-paginas-cart .cart .cart-cuerpo .cart-precio {
-          margin: 5px;
+      .cuerpo-paginas-cart .cart .container-precio {
+        margin: 10px; }
+        .cuerpo-paginas-cart .cart .container-precio .cart-precio {
           font-size: 15px;
           text-align: left;
           font-weight: bold; }
-      .cuerpo-paginas-cart .cart .cart-boton {
+      .cuerpo-paginas-cart .cart .container-boton {
         margin: 10px;
-        padding: 2px;
+        margin-bottom: 20px;
         align-self: center;
-        text-align: center;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 15px;
-        color: black;
-        width: 100px;
-        height: 20px;
-        background-color: rgba(224, 255, 255, 0.3);
-        border-radius: 10px;
-        border-style: none; }
+        justify-self: center; }
+        .cuerpo-paginas-cart .cart .container-boton .cart-boton {
+          padding: 5px;
+          text-align: center;
+          text-decoration: none;
+          font-weight: lighter;
+          font-size: 12px;
+          color: black;
+          width: 100px;
+          height: 20px;
+          background-color: rgba(224, 255, 255, 0.3);
+          border-radius: 10px;
+          border-style: none; }
   /* FORMULARIO DE CONTACTO */
   .container {
     display: flex;
@@ -793,60 +814,70 @@
   /* CART DE PRODUCTOS */
   .cuerpo-paginas-cart {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 5px 5px; }
+    gap: 20px 20px; }
     .cuerpo-paginas-cart .cart {
       width: 200px;
-      display: flex;
-      flex-direction: column;
+      height: 400px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 30px 40px;
       margin-top: 25px;
       margin-bottom: 25px;
       background-color: rgba(212, 212, 212, 0.7);
       border-radius: 10px; }
       .cuerpo-paginas-cart .cart .cart-imagen-container {
-        margin-top: 10px;
+        margin: 10px;
+        margin-bottom: 0px;
         width: 180px;
         height: 180px;
         align-self: center;
+        justify-self: center;
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 5px; }
         .cuerpo-paginas-cart .cart .cart-imagen-container .cart-imagen {
           width: 100%;
           border-radius: 5px; }
       .cuerpo-paginas-cart .cart .cart-cuerpo {
-        margin: 10px; }
+        margin: 10px;
+        margin-top: 5px; }
         .cuerpo-paginas-cart .cart .cart-cuerpo .cart-titulo {
-          margin: 10px;
-          font-size: 20px;
+          margin: 5px;
+          font-size: 15px;
           font-weight: bold;
-          text-align: center; }
+          text-align: center;
+          text-decoration: underline; }
         .cuerpo-paginas-cart .cart .cart-cuerpo .cart-description {
           display: inline-block;
           list-style: none;
           margin: auto;
-          font-size: 12px;
+          font-size: 10px;
           text-align: left; }
-        .cuerpo-paginas-cart .cart .cart-cuerpo .cart-precio {
-          margin: 5px;
+      .cuerpo-paginas-cart .cart .container-precio {
+        margin: 10px; }
+        .cuerpo-paginas-cart .cart .container-precio .cart-precio {
           font-size: 15px;
           text-align: left;
           font-weight: bold; }
-      .cuerpo-paginas-cart .cart .cart-boton {
+      .cuerpo-paginas-cart .cart .container-boton {
         margin: 10px;
-        padding: 5px;
+        margin-bottom: 20px;
         align-self: center;
-        text-align: center;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 15px;
-        color: black;
-        width: 100px;
-        height: 20px;
-        background-color: rgba(224, 255, 255, 0.3);
-        border-radius: 10px;
-        border-style: none; }
+        justify-self: center; }
+        .cuerpo-paginas-cart .cart .container-boton .cart-boton {
+          padding: 5px;
+          text-align: center;
+          text-decoration: none;
+          font-weight: lighter;
+          font-size: 12px;
+          color: black;
+          width: 100px;
+          height: 20px;
+          background-color: rgba(224, 255, 255, 0.3);
+          border-radius: 10px;
+          border-style: none; }
   /* FORMULARIO DE CONTACTO */
   .container {
     display: flex;
